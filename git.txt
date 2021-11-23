@@ -1,0 +1,33 @@
+create a user and email
+git config --global user.name "arjun"
+git config --global user.email "arjunkc2008@gmail.com"
+
+commands
+git status =to know about the git dir status
+git init= initialize a git directory in the current dir opened in bash
+git add --a= add all the files to staging area , now see git status to see the message 
+saying files to be commited but currently in staging area
+git add first.txt= push first.txt to staging area since i modified the file
+git commit -m "Initial Commit"= commit to the git repo
+git log= show all previous commits
+git diff= show diff bw working dir and staging area
+git diff --staged = diff bw old commit and current staging area #
+git commit -a -m "<comment>"= direct commit and skip the staging area
+note= the above command only works modified files and does not work if
+new file is created and not tracked
+
+file statis lifecycle:
+init-untracked(file now is tracked)-unmodified(now edit the file)-modified(use add --a)-staged
+
+NOTE- ONCE THE FILES ARE IN STAGING AREA, IT WILL IGNORE IF THERE ARE ANY MODIFICATIONS TO THE FILE,
+TO ADD THE MODIFIED FILE FOR STAGING AREA, AGAIN TYPE git add --a
+
+
+GIT IGNORE
+
+1)create .gitignore file= touch .gitignore
+2)type the name of the file (ex. error.log) we want to ignore inside .gitignore file
+3)now,any modification done to error.log file will not appear in git status
+4)if want to ignore folders, then type folder_name/ in .gitignore file
+
+NOTE- by deafault git ignores empty folder
